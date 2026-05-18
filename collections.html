@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">NOSTRA</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="collections.html" class="nav-link active">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Collections</h1>
+        <p>Browse our exclusive range of premium products</p>
+    </section>
+
+    <div class="container">
+        <div class="collections-wrapper">
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Search Products</h3>
+                    <input type="text" id="searchInput" class="search-box" placeholder="Search by name...">
+                </div>
+
+                <div class="filter-section">
+                    <h3>Category</h3>
+                    <div class="filter-options">
+                        <label class="filter-label">
+                            <input type="checkbox" class="category-filter" value="All" checked> All Categories
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="category-filter" value="Accessories"> Accessories
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="category-filter" value="Bags"> Bags
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="category-filter" value="Shoes"> Shoes
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="category-filter" value="Clothing"> Clothing
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-filter">
+                        <input type="range" id="priceRange" min="0" max="500" value="500" class="price-slider">
+                        <div class="price-display">
+                            <span>Price: $0 - $<span id="priceValue">500</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Rating</h3>
+                    <div class="filter-options">
+                        <label class="filter-label">
+                            <input type="checkbox" class="rating-filter" value="5"> ⭐⭐⭐⭐⭐ 5 Stars
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="rating-filter" value="4"> ⭐⭐⭐⭐ 4 Stars & Up
+                        </label>
+                        <label class="filter-label">
+                            <input type="checkbox" class="rating-filter" value="3"> ⭐⭐⭐ 3 Stars & Up
+                        </label>
+                    </div>
+                </div>
+
+                <button id="resetFilters" class="btn btn-secondary">Reset Filters</button>
+            </aside>
+
+            <!-- Products Section -->
+            <main class="products-section">
+                <!-- Sort Options -->
+                <div class="products-toolbar">
+                    <div class="results-count">
+                        Showing <span id="productCount">12</span> products
+                    </div>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsContainer">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+
+                <!-- No Products Found -->
+                <div id="noProducts" class="no-products" style="display: none;">
+                    <p>No products found. Try adjusting your filters.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Nostra</h4>
+                    <p>Your destination for premium fashion and lifestyle products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nostra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
